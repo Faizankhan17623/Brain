@@ -1,0 +1,19 @@
+# Private data — do not push
+memories.json
+users.json
+conversations.json
+projects.json
+
+# Claude Code settings
+.claude/
+
+# Obsidian app settings (device specific)
+.obsidian/
+
+# LinkedIn banner (personal asset)
+linkedin-banner/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
