@@ -13,7 +13,7 @@ Ongoing ear health situation: infection, tinnitus, post-wisdom teeth surgery. EN
 
 ## Related
 
-- [[Faizan Khan]]
+- [[People/Faizan Khan]]
 - [[Dr. Gaikwad]]
 
 ## Conversations

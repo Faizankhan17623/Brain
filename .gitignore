@@ -1,8 +1,16 @@
+# Environment variables — never commit
+.env
+
 # Private data — do not push
 memories.json
 users.json
 conversations.json
 projects.json
+sync_state.json
+
+# Private conversation archives
+Conversations/
+00-inbox/
 
 # Claude Code settings
 .claude/

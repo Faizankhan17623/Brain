@@ -13,7 +13,7 @@ Goal: reduce from ~88kg to 65–70kg. Gym access: treadmill, cycle, rowing machi
 
 ## Related
 
-- [[Faizan Khan]]
+- [[People/Faizan Khan]]
 
 ## Conversations
 

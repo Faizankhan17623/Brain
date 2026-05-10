@@ -15,7 +15,7 @@ Faizan's iterative resume process — LaTeX/Overleaf, ATS optimization via Jobsc
 
 - [[LinkedIn Profile]]
 - [[Job Hunting]]
-- [[Faizan Khan]]
+- [[People/Faizan Khan]]
 
 ## Conversations
 

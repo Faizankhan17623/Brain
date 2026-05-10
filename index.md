@@ -41,7 +41,7 @@ Master catalog of all pages. Updated on every ingest. Read this first when answe
 ---
 
 ## People
-- [[Faizan Khan]] — Owner of this vault. MCA student, MERN dev, AI Engineering aspirant.
+- [[People/Faizan Khan]] — Owner of this vault. MCA student, MERN dev, AI Engineering aspirant.
 - [[Dr. Gaikwad]] — ENT specialist. Treated tinnitus and ear infection.
 
 ---

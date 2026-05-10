@@ -99,7 +99,7 @@ tags:
 - [[MOC - Health & Personal]] — ear, fitness, faith
 
 ### People & Places
-- [[Faizan Khan]] · [[Dr. Gaikwad]]
+- [[People/Faizan Khan]] · [[Dr. Gaikwad]]
 - [[Pune]] · [[India]] · [[Allana Institute]] · [[Poona College]]
 
 ---
@@ -130,7 +130,7 @@ tags:
 ## Links
 
 `fk3701@gmail.com` · `+91 90115 75978`
-[Portfolio](https://portfolio-pied-eight-2csy0b9zua.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/FaizanKhan-FullStack) · [GitHub](https://github.com/Faizankhan17623)
+[Portfolio](https://portfolio-pied-eight-2csy0b9zua.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/FaizanKhan-FullStack) · [Brain Repo](https://github.com/Faizankhan17623/Brain) · [GitHub](https://github.com/Faizankhan17623)
 
 ---
 

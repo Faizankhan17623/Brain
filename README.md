@@ -16,7 +16,7 @@ Built with **Obsidian** as the UI layer and **Claude Code** as the AI that write
 
 ```
 Brain/
-├── 00-inbox/        Raw sources land here first
+├── 00-inbox/        Raw sources land here first (auto-synced from claude.ai)
 ├── 01-daily/        YYYY-MM-DD daily notes
 ├── 02-projects/     Active project notes and trackers
 ├── 03-meetings/     Meeting notes
@@ -31,9 +31,28 @@ Brain/
 ├── Companies/       Target employer hub pages
 ├── People/          Personal CRM pages
 │
+├── sync_claude.py   Auto-sync script — fetches new claude.ai chats every 5 hours
+├── build_vault_v2.py  Rebuilds Conversations/ from conversations.json export
 ├── index.md         Master catalog of all wiki pages
 ├── log.md           Append-only activity log
 └── 🏠 Home.md       Vault dashboard
+```
+
+---
+
+## Auto-Sync System
+
+New claude.ai conversations automatically sync to `00-inbox/` every 5 hours via `sync_claude.py` running on Windows Task Scheduler.
+
+```
+claude.ai chat → Task Scheduler (every 5h) → sync_claude.py → 00-inbox/ → /inbox ingest → vault
+```
+
+**Setup:**
+```bash
+pip install requests python-dotenv
+# Add CLAUDE_SESSION_KEY to .env
+python sync_claude.py   # test run
 ```
 
 ---
@@ -42,46 +61,27 @@ Brain/
 
 ### The Pattern (Karpathy LLM-wiki)
 
-The idea is simple:
 - Human drops a source (URL, text, file, conversation)
 - Claude reads it, discusses key takeaways, and writes a wiki page
 - Claude updates all related pages and the index
 - Knowledge compounds over time — one ingest touches 5–15 pages
 
-### Prompts Used
+### Slash Commands
 
-**Vault initialization prompt:**
-```
-You are maintaining a personal Obsidian wiki using the Karpathy LLM-wiki pattern.
-Claude writes and maintains all wiki content. I curate sources and direct analysis.
-The wiki is a persistent, compounding artifact — knowledge is compiled once and kept current.
-```
+| Command | What it does |
+|---------|-------------|
+| `/inbox` | Ingests a new source → writes wiki page → updates index.md + log.md |
+| `/daily` | Creates today's daily note in 01-daily/ with Yesterday/Tomorrow chain |
 
-**Ingest prompt (for new sources):**
-```
-/inbox [paste URL or text here]
-```
-Claude then: reads the source → discusses takeaways → writes a summary page in 04-resources/ → updates index.md → updates related pages → appends to log.md.
+### Shortcut Commands
 
-**Query prompt:**
-```
-[Ask any question about your own knowledge base]
-```
-Claude then: reads index.md → drills into relevant pages → synthesizes answer with wikilink citations → files reusable answers back as new pages.
-
-**Daily note prompt:**
-```
-/daily
-```
-Claude creates today's daily note in 01-daily/YYYY-MM-DD.md with correct frontmatter and Yesterday/Tomorrow chain links.
-
-**Shortcut commands:**
 ```
 "Log application to [Company] for [Role] — status Applied"
 "Mark DSA done for today"
 "Add [Course] on [Platform] to my course list"
 "Add [Name] — [Role] at [Company] — connected today on LinkedIn"
 "What do I need to do today?"
+"Show my habit streak this week"
 ```
 
 ---
@@ -92,6 +92,8 @@ Claude creates today's daily note in 01-daily/YYYY-MM-DD.md with correct frontma
 |------|---------|
 | [Obsidian](https://obsidian.md) | UI layer — note viewing, graph view, backlinks |
 | [Claude Code](https://claude.ai/code) | AI that writes and maintains all content |
+| `sync_claude.py` | Pulls new claude.ai chats into 00-inbox/ automatically |
+| `build_vault_v2.py` | One-time script to rebuild Conversations/ from JSON export |
 | Dataview plugin | Live query tables inside Obsidian |
 | Calendar plugin | Calendar sidebar for daily notes |
 | Minimal theme | Clean UI theme for Obsidian |
@@ -100,6 +102,7 @@ Claude creates today's daily note in 01-daily/YYYY-MM-DD.md with correct frontma
 
 ## Key Features
 
+- **Auto-sync** — claude.ai chats land in `00-inbox/` every 5 hours automatically
 - **Job Hunt Tracker** — every application with follow-up dates, interview rounds, outcome
 - **Habit Tracker** — daily checklist with weekly streak table
 - **Course List** — all learning resources with status and progress
@@ -108,6 +111,19 @@ Claude creates today's daily note in 01-daily/YYYY-MM-DD.md with correct frontma
 - **Code Snippet Library** — React, Node/Express, Claude API snippets
 - **Spaced Repetition Queue** — concepts with review-by dates
 - **Daily Notes** — chained Yesterday/Tomorrow navigation
+
+---
+
+## What's Not in This Repo
+
+For privacy, the following are excluded from git:
+
+- `.env` — session keys
+- `conversations.json` — raw conversation export (30MB)
+- `Conversations/` — private conversation archive
+- `00-inbox/` — private synced chats
+- `sync_state.json` — sync metadata
+- `memories.json`, `users.json`, `projects.json` — private data
 
 ---
 

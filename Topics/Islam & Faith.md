@@ -13,7 +13,7 @@ Faizan's Islamic practice (Ahlul Hadith orientation). Faith integrated into pers
 
 ## Related
 
-- [[Faizan Khan]]
+- [[People/Faizan Khan]]
 
 ## Conversations
 

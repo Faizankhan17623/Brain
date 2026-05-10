@@ -1,0 +1,286 @@
+================================================================================
+  FAIZAN'S BRAIN — COMPLETE COMMAND REFERENCE
+  Last updated: 2026-04-27 (v2 — LinkedIn Banner added)
+  How to use: Type any command below in your Claude Code chat
+================================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SLASH COMMANDS  (built-in, type exactly as shown)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+/daily
+  Creates today's daily note at 01-daily/YYYY-MM-DD.md
+  Includes: Morning tasks, learning block, job hunt log, wins, blockers
+  Auto-chains: links to yesterday's note and tomorrow's note
+  Use it: Every morning to plan your day
+
+/inbox
+  Ingest any source into the wiki permanently
+  After /inbox, paste: a URL / article text / job description / notes
+  Creates: summary page in 04-resources/
+  Also updates: index.md, log.md, and relevant topic pages
+  Use it: Every time you read something worth keeping
+
+/lint
+  Vault health check — scans the entire Brain for issues
+  Finds: orphan pages, missing frontmatter, broken wikilinks,
+         pages not in index.md, stale status fields
+  Use it: Once a week to keep the vault clean
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  JOB HUNT COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"Log application to [Company] for [Role] on [Date]"
+  Adds a new row to 02-projects/job-hunt-tracker.md
+  Example: "Log application to Infosys for SDE-1 on 2026-04-27"
+
+"Update [Company] status to [Applied/OA/Interview/Offer/Rejected]"
+  Updates the status in job-hunt-tracker.md
+  Example: "Update Zensar status to Interview"
+
+"Start interview prep for [Company]"
+  Adds a full prep section in 04-resources/interview-prep-hub.md
+  Includes: tech stack, DSA topics, HR questions, prep checklist
+  Example: "Start interview prep for Sarvam AI"
+
+"Show me my job hunt stats"
+  Summarizes your tracker — total applied, interviews, offers, rejections
+
+"What companies have I applied to?"
+  Lists all applications with current status from job-hunt-tracker.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  LEARNING & REVIEW COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"Add [concept] to review queue, review in [N] days"
+  Adds concept to 04-resources/review-queue.md with a review-by date
+  Example: "Add useEffect cleanup to review queue, review in 3 days"
+
+"What's due for review today?"
+  Checks review-queue.md and lists all concepts due today or overdue
+
+"Mark [concept] as reviewed"
+  Updates the concept in review-queue.md — pushes next review date further out
+  Example: "Mark JWT auth flow as reviewed"
+
+"Do my weekly review"
+  Creates a weekly review note at 01-daily/weekly-YYYY-WW.md
+  Fills in: learning done, jobs applied, wins, blockers, next week goals
+  Use it: Every Sunday evening
+
+"Summarize my [topic] progress"
+  Reads the relevant topic page and gives you a progress summary
+  Example: "Summarize my DSA progress"
+  Example: "Summarize my Python progress"
+  Example: "Summarize my AI Engineering progress"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SNIPPET COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"Save this snippet: [paste your code]"
+  Files the code into the right snippet file based on language/tech
+  Auto-adds: title, description, tags, date
+  Example: Paste a custom React hook → goes to react-snippets.md
+
+"Show me snippets for [React/Node/MongoDB/Claude API/CSS/JavaScript]"
+  Opens and displays the relevant snippet file
+  Example: "Show me snippets for React"
+  Example: "Show me snippets for Claude API"
+
+"Add a note to [snippet name]"
+  Adds explanation/context to an existing snippet
+  Example: "Add a note to the JWT middleware snippet"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  MEETING COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"Log a meeting with [person/company] about [topic] on [date]"
+  Creates a meeting note at 03-meetings/YYYY-MM-DD-topic.md
+  Includes: attendees, agenda, key points, decisions, action items
+  Example: "Log a meeting with Zensar HR about internship on 2026-04-28"
+
+"Log an interview at [Company] on [date]"
+  Creates an interview-specific meeting note
+  Includes: role, round, questions asked, answers given, outcome
+  Example: "Log an interview at Cognizant on 2026-04-30"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PROJECT COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"Create a project note for [project name]"
+  Creates 02-projects/[name].md with full project structure
+  Includes: status, stack, GitHub link, features, tasks, blockers
+
+"Update [Project] — [what you did today]"
+  Appends today's progress to the project file and daily note
+  Example: "Update Cine Circuit — added JWT refresh token today"
+
+"What's the status of [Project]?"
+  Reads the project page and gives a current status summary
+
+"Add task to [Project]: [task description]"
+  Adds a task item to the project file
+  Example: "Add task to LinkVault: set up PWA manifest"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  QUERY COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"What do I know about [topic]?"
+  Reads index.md, finds relevant pages, synthesizes an answer
+  Example: "What do I know about RAG?"
+  Example: "What do I know about system design?"
+
+"Summarize my vault"
+  Gives an overview of everything in the Brain — topics, projects, jobs
+
+"What have I done this week?"
+  Reads daily notes from this week and summarizes activity
+
+"What should I focus on today?"
+  Reads job tracker, review queue, daily note — gives a priority list
+
+"Show me [page name]"
+  Opens and displays any wiki page
+  Example: "Show me my AI Engineering page"
+  Example: "Show me my job-hunt-tracker"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  LINKEDIN BANNER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE LOCATION:
+  Brain/linkedin-banner/banner.html
+
+HOW TO USE:
+  1. Double-click banner.html → opens in Chrome
+  2. Click the green "Download Full PNG" button at the bottom
+  3. File saves as: faizan-khan-linkedin-banner.png (1584 x 396px)
+  4. Go to LinkedIn → Your Profile → pencil icon on cover photo
+     → "Background photo" → Upload the PNG
+
+WHAT IT CONTAINS:
+  - Black background with teal glow + grid pattern
+  - Name: Faizan Khan (large, bold, teal accent)
+  - Tagline: Full Stack Developer → AI Engineer · Pune, India
+  - Open to Work badge (animated pulsing dot)
+  - Tech tags: MERN Stack, Python, Claude API, RAG, LLMs, REST APIs, MongoDB, Node.js
+  - 3 Anthropic certifications listed on the right
+  - Email: faizankhan901152@gmail.com
+  - GitHub: github.com/Faizankhan17623
+  - Corner accent brackets (teal) + top/bottom glow lines
+
+TO REBUILD / UPDATE BANNER:
+  Tell Claude: "Update the LinkedIn banner — change [whatever]"
+  Claude will edit banner.html directly.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  MEMORY COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"Remember that [fact]"
+  Saves the fact to Claude's memory for future conversations
+  Example: "Remember that I prefer dark themes"
+
+"Forget [fact]"
+  Removes a memory entry
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  OBSIDIAN KEYBOARD SHORTCUTS  (inside Obsidian app, not Claude)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Ctrl + G          Open Graph View (visual map of all linked pages)
+Ctrl + O          Quick open any file by name
+Ctrl + P          Command palette (search all Obsidian commands)
+Ctrl + E          Toggle Edit / Preview mode
+Ctrl + K          Insert a link [[wikilink]] or [markdown link]
+Ctrl + /          Toggle bullet point
+Ctrl + B          Bold selected text
+Ctrl + Shift + F  Search across all vault files
+Alt + Enter       Follow a [[wikilink]] to that page
+Ctrl + W          Close current tab
+Ctrl + Tab        Switch between open tabs
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  VAULT FILE STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Brain/
+├── 00-inbox/                  Raw sources land here first
+├── 01-daily/                  YYYY-MM-DD.md daily notes
+│                              weekly-YYYY-WW.md weekly reviews
+├── 02-projects/               Active project working notes
+│   └── job-hunt-tracker.md    ← Live application tracker
+├── 03-meetings/               Meeting and interview notes
+├── 04-resources/              Reference pages, concept wiki
+│   ├── interview-prep-hub.md  ← Company prep guide
+│   ├── review-queue.md        ← Spaced repetition queue
+│   ├── weekly-review-template.md
+│   └── snippets/              ← Code snippet library
+│       ├── README.md
+│       ├── react-snippets.md
+│       ├── node-express-snippets.md
+│       └── claude-api-snippets.md
+├── 05-goals/                  Annual + quarterly goals
+├── 06-people/                 CRM-style contact notes
+├── 07-archive/                Archived (never delete)
+│
+├── Projects/                  Hub pages (Cine Circuit, StudyNotion, LinkVault)
+├── Topics/                    Topic wiki pages (AI Engineering, MERN, DSA...)
+├── Companies/                 Target employer pages
+├── People/                    Faizan Khan, Dr. Gaikwad
+├── Schools/                   Allana Institute, Poona College
+├── Maps of Content/           MOC index pages
+│
+├── linkedin-banner/           LinkedIn banner files
+│   └── banner.html            ← Open in Chrome + click Download PNG
+│
+├── 🏠 Home.md                 ← Start here every day
+├── index.md                   Master catalog (read first on every query)
+├── log.md                     Append-only activity log
+└── BRAIN-COMMANDS.txt         ← This file
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  RECOMMENDED OBSIDIAN PLUGINS  (Settings → Community Plugins → Browse)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Minimal          Best dark theme — clean black background
+Dataview         Turns notes into live database tables
+Calendar         Sidebar calendar — click dates to open daily notes
+Tasks            Track tasks with due dates across all notes
+Templater        Auto-fill note templates on creation
+Style Settings   Fine-tune colors and fonts per theme
+
+To install: Settings → Community Plugins → turn off Safe mode → Browse → search name → Install → Enable
+
+================================================================================
+  DAILY WORKFLOW (recommended routine)
+================================================================================
+
+MORNING (5 min)
+  1. Type /daily in Claude → opens today's note
+  2. Write your 3 tasks for the day in Obsidian
+  3. Check review-queue for anything due today
+
+DURING THE DAY
+  - Learn something? → /inbox + paste it
+  - Apply to a job? → "Log application to [Company] for [Role]"
+  - Finish a study session? → "Add [concept] to review queue"
+  - Have a meeting/interview? → "Log a meeting with [person]"
+  - Write code you want to keep? → "Save this snippet: [code]"
+
+EVENING (5 min)
+  - Open today's daily note in Obsidian
+  - Fill in Wins and Blockers sections
+  - Write one sentence about what you learned
+
+SUNDAY
+  - Type "Do my weekly review" → fills weekly-YYYY-WW.md
+  - Check /lint for vault health
+
+================================================================================
