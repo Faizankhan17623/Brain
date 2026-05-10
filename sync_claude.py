@@ -23,7 +23,8 @@ from dotenv import load_dotenv
 
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
 
-VAULT       = Path("C:/Users/fk241/OneDrive/Desktop/Brain")
+# Vault root = the folder this script lives in (works for any user, any machine)
+VAULT       = Path(os.environ.get("VAULT_PATH", Path(__file__).parent.resolve()))
 INBOX_DIR   = VAULT / "00-inbox"
 STATE_FILE  = VAULT / "sync_state.json"   # tracks which UUIDs are already synced
 
